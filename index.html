@@ -1,52 +1,13 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f4efe6">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="大手印修持">
-<title>大手印修持</title>
-<style>
-:root{--bg:#f4efe6;--paper:#fffdf8;--ink:#302a24;--muted:#81766a;--line:#ddd2c3;--accent:#6e5842}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink)}
-body{font-family:-apple-system,BlinkMacSystemFont,"Noto Serif TC","PingFang TC","Microsoft JhengHei",serif}
-button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
-.app{max-width:680px;min-height:100vh;margin:auto}
-header{padding:28px 18px 16px;text-align:center}
-h1{margin:0;font-size:25px;letter-spacing:.15em;font-weight:600}
-.sub{margin-top:7px;color:var(--muted);font-size:13px}
-main{padding:0 14px 30px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:12px}
-.primary{border:2px solid var(--accent);text-align:center;padding:28px 20px}
-.primary h2{font-size:25px;margin:0 0 18px}
-.primary button{width:100%;border:0;border-radius:12px;background:var(--accent);color:white;padding:15px;font-weight:600}
-.section{margin:24px 4px 10px;color:var(--muted);font-size:13px;letter-spacing:.12em}
-.song{width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px;margin-bottom:10px;color:var(--ink)}
-.song strong{display:block;font-size:18px;margin-bottom:4px}.song span{font-size:12px;color:var(--muted)}
-.back{border:0;background:transparent;color:var(--accent);padding:4px 2px 14px}
-.lyrics{min-height:58vh;display:flex;flex-direction:column;justify-content:center;padding:25px 20px}
-.line{font-size:21px;line-height:2.05;letter-spacing:.04em;margin:0 0 13px;overflow-wrap:anywhere}
-.navrow{display:flex;gap:10px;margin-top:12px}
-.nav{flex:1;border:1px solid var(--line);background:var(--paper);color:var(--accent);border-radius:11px;padding:13px}
-.next{background:var(--accent);color:#fff;border-color:var(--accent)}
-.nav:disabled{opacity:.3}
-.count{text-align:center;color:var(--muted);font-size:12px;margin-top:9px}
-@media(max-width:420px){.line{font-size:20px}.lyrics{padding:22px 17px}}
-</style>
-</head>
-<body><div class="app">
-<header><h1>大手印修持</h1><div class="sub">中文歌偈練習</div></header>
-<main id="main"></main></div>
-<script>
-const sadhanaLines=["南無咕嚕瑪哈睦札耶(頂禮上師大手印)","大樂空性無別大手印，本尊壇城生起之基礎，","確信於此即是無上見，自然安住於此即禪修，","見修成友伴即無上行，消融取捨希懼即是果，","消融一切偏執之心念，如是即為無上三昧耶，","遠離破立顯空不可分，如是即為生起次第也；","自然安住樂空不二中，即是無上圓滿次第也，","堅固勝義本尊之佛慢，覺空無別一切之基礎。","本來解脫自在之明光，如是即為勝義之佛陀；","覺性展現迷惑對治法，即是本然實相之正法；","俱足覺性解脫善功德，如是即為登地之聖者；","超越依怙以及依怙者，如是即為勝義之皈依。","有情眾生猶如水中月，世俗諦之顯空不二也，","不能悟此歷盡千般苦，悟時知惑無根自解脫，","何等殊勝奇妙菩提心，消融一切所依參考點。","蘊含能所當下諸顯相，明光大印自然之展現，","是故能淨以及所淨者，二元執著原處即解脫，","於此鬆坦無整且清新，安住於其自性中：","啊~啊~","於彼虛空展現力之中，生起顯空本尊之色相，","無破無立離假名標籤，如是即為身之寂靜處。","本俱身之自然狀態中，自然之中自在而放鬆，","無數神聖莊嚴之顯相，定然無勤鬆鬆而生起。","(安住片刻)","於此覺性空性無別中，頂禮樂空無別大手印，","勤勇造作概念盡寂滅，祈願究竟實相能現前。","極致美麗色聲香味觸，顯空不二如虹如水月，","顯相與心之間無分界，於此平等性中做供養，","遍涵一切似有之顯相，祈願如是清淨能現前。","本來解脫罪墮自性中，無有懺悔懺者之概念，","若就僅為緣起俗諦言，憶罪墮安住其本解脫。","大手印之自在成就眾，雖已照見勝義平等性，","然猶慈愛世俗迷惑眾，歡喜殊勝導引我隨喜。","住於大樂廣境成就眾，一如往昔誓言與祈願，","為歷惑相之苦有情眾，祈請轉動大樂之法輪。","迷惑融於廣境大聖者，雖已無生與死之概念，","為恆饒益迷惑有情眾，祈請不入涅槃長住世。","萬法實相遠離戲論故，了無迴向迴向者概念，","為能生起無邊之淨觀，迴向所積善於大菩提。","顯相皆是習性之惑相，亦明空心自然之展現。","直指顯相即心之口訣，請賜加持於此生堅信。","此心並非生於四邊見，且亦超越一多之邊見。","直指心即空性甚深訣，請賜加持於此生堅信。","所說空性不僅只是空，且是三身任運之呈現，","直指自性任運甚深訣，請賜加持於此生堅信。","所說樂空力用生萬念，皆自解脫而非他解脫，","心念自解甚深之口訣，祈願吾等當下即了悟。","一切顯相顯空自解脫，一切之識明空自解脫，","苦樂覺受樂空自解脫，自生之覺覺空不~二：","啊~","(不淨三門之顯相，傳遷入三金剛界：)","以此殷切渴盼祈請力，即令三門不淨諸惑相，","傳遷至清淨三金剛界，躍入覺性空性不二中：","啊~啊~啊~","(為能強力破除沙門與梵志之概念，並增長樂空覺證之方法：)","以方便物破梵志概念，以智慧物破沙門概念，","以離羞怯破凡夫概念，以安住樂空中生淨觀。","為淨貪欲為樂空不二，而修第三灌究竟行持，","雖無交合平等性中合，交合交合安住樂空中。","啊吙瑪哈蘇卡~","認證十六喜之本質故，空色乃十六空自展現，","願十六供養天女之藝，令究竟樂空本尊歡喜。","啊吙~","大手印瑜伽士瑜伽女，歡此無垢薈供聖甘露，","即破染淨念之聖方便，平等性中受用令心喜，","萬法本然偉哉本解脫，僅聽聞即解脫繫縛念，","僅思維即平息煩惱苦，修生慧時於此即無惑。","(瑜伽行者應常唱金剛歌、跳金剛舞，於薈供時，金剛歌舞甚為重要，以下即為金剛歌舞：)","聚此瑜伽士與瑜伽女，匯聚來此薈供之勝輪，","教云於此大樂薈供輪，應唱金剛歌跳金剛舞。","腳向外之舞蹈能淨化，外在顯相為神奇幻相，","腳朝內之舞蹈能淨化，一切妄念於彼虛空中，","瑜伽男女身體之舞動，能轉妄念覺受為大樂，","甚惑三時念想亦轉入，無有時間性之廣大境。","此非實質方所薈供處，顯空不二如虹越量宮。","了悟全然解脫之樂空，即此金剛歌與金剛舞，","隨生皆是偉大自解脫，此殊勝法奇妙不思議，","如是思維時即生喜樂，如是歡喜歌與歡喜舞，","以樂音供而令大手印，成就眾之壇城盡歡喜。","啦啦啦啦啦~啦啦啦啦啦~啦啦啦啦啦啦啦啦啦","樂空不二大手印之中，無新供餘供造作分別，","然以無謬世俗緣起觀，無概念離造作施餘供。","大印世俗壇城顯而空，融入勝義大樂明光境，","了無消融消融者概念，躍入大樂空性不二中。","大空生起大樂明光力，情器顯相如虹如水月，","圓滿修持無緣大悲故，祈願自他二利皆成就。","雖於樂空大印本質中，了無證與能證所證果，","然於無謬世俗緣起境，願離垢果任運而利他。","根吉祥輪迴涅槃無別，道吉祥方便智慧無別，","果吉祥三身任運展現，祈願根道果吉祥閃耀！"];
-const songs=[{"title":"大手印之歌","subtitle":"SOR84","lines":["我修大手印觀時,心住本然離造作,","無散亂中鬆鬆住,空性境中明朗住,","喜樂境中明覺住,無分別中寬坦住,","眾緣境中平等住,此心如是安住已,","無滅決信種種生,自明任運事業成,","任何果報無需求,心離願求甚樂哉!","二執希懼盡除故,如是覺受甚樂哉!","一切迷惑與妄念,盡成智慧甚樂哉!"]},{"title":"一切顯相","subtitle":"SOR203","lines":["一切顯空不二顯相,如同彩虹光彩閃亮,","在顯空離戲的廣境中,放下放鬆寬坦安住。","種種聲音聲空不二,如同回音繚繞不停,","在聲空離戲的廣境中,放下放鬆寬坦安住。","種種覺受樂空不二,超越筆墨所能形容,","在樂空離戲的廣境中,放下放鬆寬坦安住。","一切覺空不二覺性,超越概念所能明瞭,","在覺空離戲的廣境中,放下放鬆寬坦安住。"]},{"title":"如幻三摩地詩偈","subtitle":"SOR323","lines":["知五蘊如幻,無異幻於蘊,","離想行寂靜,最勝智度行。(佛陀所說)","如幻作多身,謂男女象馬,","是相非真實,諸法亦復然。(佛陀所說)","如夢亦如幻,如乾闥婆城,","其相生住滅,所說亦如是。(龍樹菩薩作)","由於諸法見真妄,故得諸法二種體,","說見真境即真諦,所見虛妄名俗諦。(月稱菩薩作)","眾生如夢幻,究時同芭蕉,","涅槃不涅槃,其性悉無別。(寂天菩薩作)"]}];
-let page=0,current="home";
-const totalPages=Math.ceil(sadhanaLines.length/4);
-function home(){main.innerHTML='<div class="card primary"><h2>🪷 大手印儀軌</h2><button onclick="openSadhana()">進入儀軌</button></div><div class="section">其他歌偈</div>'+songs.map((s,i)=>'<button class="song" onclick="openSong('+i+')"><strong>'+s.title+'</strong><span>'+s.subtitle+'</span></button>').join('')}
-function openSadhana(){current="sadhana";page=0;render()}
-function openSong(i){current="song";page=i;render()}
-function sadhana(){const p=sadhanaLines.slice(page*4,page*4+4);main.innerHTML='<button class="back" onclick="current='home';render()">← 回首頁</button><div class="card lyrics">'+p.map(x=>'<div class="line">'+x+'</div>').join('')+'</div><div class="navrow"><button class="nav" '+(page===0?'disabled':'')+' onclick="page--;render()">← 上一頁</button><button class="nav next" '+(page>=totalPages-1?'disabled':'')+' onclick="page++;render()">下一頁 →</button></div><div class="count">第 '+(page+1)+' / '+totalPages+' 頁</div>'}
-function song(){const s=songs[page];main.innerHTML='<button class="back" onclick="current='home';render()">← 回首頁</button><div class="card lyrics">'+s.lines.map(x=>'<div class="line">'+x+'</div>').join('')+'</div>'}
-function render(){if(current==="home")home();else if(current==="sadhana")sadhana();else song()}render();
-</script></body></html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4efe6"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="大手印修持"><title>大手印修持</title><style>:root{--bg:#f4efe6;--paper:#fffdf8;--ink:#302a24;--muted:#81766a;--line:#ddd2c3;--accent:#6e5842}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Serif TC","PingFang TC","Microsoft JhengHei",serif}.app{max-width:680px;min-height:100vh;margin:auto}header{text-align:center;padding:28px 18px 16px}h1{margin:0;font-size:25px;letter-spacing:.15em;font-weight:600}.sub{margin-top:7px;color:var(--muted);font-size:13px}main{padding:0 14px 30px}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:12px}.primary{border:2px solid var(--accent);text-align:center;padding:28px 20px}.primary h2{font-size:25px;margin:0 0 18px}.primary button{width:100%;border:0;border-radius:12px;background:var(--accent);color:#fff;padding:15px;font-weight:600;font-size:17px}.section{margin:24px 4px 10px;color:var(--muted);font-size:13px;letter-spacing:.12em}.song{width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px;margin-bottom:10px;color:var(--ink);font:inherit}.song strong{display:block;font-size:18px;margin-bottom:4px}.song span{font-size:12px;color:var(--muted)}.back{border:0;background:transparent;color:var(--accent);padding:4px 2px 14px;font:inherit}.lyrics{min-height:58vh;display:flex;flex-direction:column;justify-content:center;padding:25px 20px}.line{font-size:20px;line-height:1.9;letter-spacing:.02em;margin:0 0 10px;overflow-wrap:anywhere}.navrow{display:flex;gap:10px}.nav{flex:1;border:1px solid var(--line);background:var(--paper);color:var(--accent);border-radius:11px;padding:13px;font:inherit}.next{background:var(--accent);color:#fff;border-color:var(--accent)}.nav:disabled{opacity:.3}.count{text-align:center;color:var(--muted);font-size:12px;margin-top:9px}@media(max-width:420px){.line{font-size:19px}.lyrics{padding:22px 17px}}</style></head><body><div class="app"><header><h1>大手印修持</h1><div class="sub">中文歌偈練習</div></header><main id="main"></main></div><script>
+const lyrics=[
+"南無咕嚕瑪哈睦札耶(頂禮上師大手印)","大樂空性無別大手印，本尊壇城生起之基礎，","確信於此即是無上見，自然安住於此即禪修，","見修成友伴即無上行，消融取捨希懼即是果，","消融一切偏執之心念，如是即為無上三昧耶，","遠離破立顯空不可分，如是即為生起次第也；","自然安住樂空不二中，即是無上圓滿次第也，","堅固勝義本尊之佛慢，覺空無別一切之基礎。","本來解脫自在之明光，如是即為勝義之佛陀；","覺性展現迷惑對治法，即是本然實相之正法；","俱足覺性解脫善功德，如是即為登地之聖者；","超越依怙以及依怙者，如是即為勝義之皈依。","有情眾生猶如水中月，世俗諦之顯空不二也，","不能悟此歷盡千般苦，悟時知惑無根自解脫，","何等殊勝奇妙菩提心，消融一切所依參考點。","蘊含能所當下諸顯相，明光大印自然之展現，","是故能淨以及所淨者，二元執著原處即解脫，","於此鬆坦無整且清新，安住於其自性中：","啊~啊~","於彼虛空展現力之中，生起顯空本尊之色相，","無破無立離假名標籤，如是即為身之寂靜處。","本俱身之自然狀態中，自然之中自在而放鬆，","無數神聖莊嚴之顯相，定然無勤鬆鬆而生起。","(安住片刻)","於此覺性空性無別中，頂禮樂空無別大手印，","勤勇造作概念盡寂滅，祈願究竟實相能現前。","極致美麗色聲香味觸，顯空不二如虹如水月，","顯相與心之間無分界，於此平等性中做供養，","遍涵一切似有之顯相，祈願如是清淨能現前。","本來解脫罪墮自性中，無有懺悔懺者之概念，","若就僅為緣起俗諦言，憶罪墮安住其本解脫。","大手印之自在成就眾，雖已照見勝義平等性，","然猶慈愛世俗迷惑眾，歡喜殊勝導引我隨喜。","住於大樂廣境成就眾，一如往昔誓言與祈願，","為歷惑相之苦有情眾，祈請轉動大樂之法輪。","迷惑融於廣境大聖者，雖已無生與死之概念，","為恆饒益迷惑有情眾，祈請不入涅槃長住世。","萬法實相遠離戲論故，了無迴向迴向者概念，","為能生起無邊之淨觀，迴向所積善於大菩提。","顯相皆是習性之惑相，亦明空心自然之展現。","直指顯相即心之口訣，請賜加持於此生堅信。","此心並非生於四邊見，且亦超越一多之邊見。","直指心即空性甚深訣，請賜加持於此生堅信。","所說空性不僅只是空，且是三身任運之呈現，","直指自性任運甚深訣，請賜加持於此生堅信。","所說樂空力用生萬念，皆自解脫而非他解脫，","心念自解甚深之口訣，祈願吾等當下即了悟。","一切顯相顯空自解脫，一切之識明空自解脫，","苦樂覺受樂空自解脫，自生之覺覺空不~二：","啊~","(不淨三門之顯相，傳遷入三金剛界：)","以此殷切渴盼祈請力，即令三門不淨諸惑相，","傳遷至清淨三金剛界，躍入覺性空性不二中：","啊~啊~啊~","(為能強力破除沙門與梵志之概念，並增長樂空覺證之方法：)","以方便物破梵志概念，以智慧物破沙門概念，","以離羞怯破凡夫概念，以安住樂空中生淨觀。","為淨貪欲為樂空不二，而修第三灌究竟行持，","雖無交合平等性中合，交合交合安住樂空中。","啊吙瑪哈蘇卡~","認證十六喜之本質故，空色乃十六空自展現，","願十六供養天女之藝，令究竟樂空本尊歡喜。","啊吙~","大手印瑜伽士瑜伽女，歡此無垢薈供聖甘露，","即破染淨念之聖方便，平等性中受用令心喜，","萬法本然偉哉本解脫，僅聽聞即解脫繫縛念，","僅思維即平息煩惱苦，修生慧時於此即無惑。","(瑜伽行者應常唱金剛歌、跳金剛舞，於薈供時，金剛歌舞甚為重要，以下即為金剛歌舞：)","聚此瑜伽士與瑜伽女，匯聚來此薈供之勝輪，","教云於此大樂薈供輪，應唱金剛歌跳金剛舞。","腳向外之舞蹈能淨化，外在顯相為神奇幻相，","腳朝內之舞蹈能淨化，一切妄念於彼虛空中，","瑜伽男女身體之舞動，能轉妄念覺受為大樂，","甚惑三時念想亦轉入，無有時間性之廣大境。","此非實質方所薈供處，顯空不二如虹越量宮。","了悟全然解脫之樂空，即此金剛歌與金剛舞，","隨生皆是偉大自解脫，此殊勝法奇妙不思議，","如是思維時即生喜樂，如是歡喜歌與歡喜舞，","以樂音供而令大手印，成就眾之壇城盡歡喜。","啦啦啦啦啦~啦啦啦啦啦~啦啦啦啦啦啦啦啦啦","樂空不二大手印之中，無新供餘供造作分別，","然以無謬世俗緣起觀，無概念離造作施餘供。","大印世俗壇城顯而空，融入勝義大樂明光境，","了無消融消融者概念，躍入大樂空性不二中。","大空生起大樂明光力，情器顯相如虹如水月，","圓滿修持無緣大悲故，祈願自他二利皆成就。","雖於樂空大印本質中，了無證與能證所證果，","然於無謬世俗緣起境，願離垢果任運而利他。","根吉祥輪迴涅槃無別，道吉祥方便智慧無別，","果吉祥三身任運展現，祈願根道果吉祥閃耀！"];
+const songs=[{t:"大手印之歌",l:["我修大手印觀時,心住本然離造作,","無散亂中鬆鬆住,空性境中明朗住,","喜樂境中明覺住,無分別中寬坦住,","眾緣境中平等住,此心如是安住已,","無滅決信種種生,自明任運事業成,","任何果報無需求,心離願求甚樂哉!","二執希懼盡除故,如是覺受甚樂哉!","一切迷惑與妄念,盡成智慧甚樂哉!"]},{t:"一切顯相",l:["一切顯空不二顯相,如同彩虹光彩閃亮,","在顯空離戲的廣境中,放下放鬆寬坦安住。","種種聲音聲空不二,如同回音繚繞不停,","在聲空離戲的廣境中,放下放鬆寬坦安住。","種種覺受樂空不二,超越筆墨所能形容,","在樂空離戲的廣境中,放下放鬆寬坦安住。","一切覺空不二覺性,超越概念所能明瞭,","在覺空離戲的廣境中,放下放鬆寬坦安住。"]},{t:"如幻三摩地詩偈",l:["知五蘊如幻,無異幻於蘊,","離想行寂靜,最勝智度行。(佛陀所說)","如幻作多身,謂男女象馬,","是相非真實,諸法亦復然。(佛陀所說)","如夢亦如幻,如乾闥婆城,","其相生住滅,所說亦如是。(龍樹菩薩作)","由於諸法見真妄,故得諸法二種體,","說見真境即真諦,所見虛妄名俗諦。(月稱菩薩作)","眾生如夢幻,究時同芭蕉,","涅槃不涅槃,其性悉無別。(寂天菩薩作)"]}];
+let mode="home",page=0;const total=Math.ceil(lyrics.length/4);const main=document.getElementById("main");
+function render(){if(mode==="home")home();else if(mode==="sadhana")sadhana();else song()}
+function home(){main.innerHTML='<div class="card primary"><h2>🪷 大手印儀軌</h2><button onclick="openSadhana()">進入儀軌</button></div><div class="section">其他歌偈</div>'+songs.map((s,i)=>'<button class="song" onclick="openSong('+i+')"><strong>'+s.t+'</strong></button>').join('')}
+function openSadhana(){mode="sadhana";page=0;render()}
+function openSong(i){mode="song";page=i;render()}
+function goHome(){mode="home";page=0;render()}
+function sadhana(){const p=lyrics.slice(page*4,page*4+4);main.innerHTML='<button class="back" onclick="goHome()">← 回首頁</button><div class="card lyrics">'+p.map(x=>'<div class="line">'+x+'</div>').join('')+'</div><div class="navrow"><button class="nav" '+(page===0?'disabled':'')+' onclick="page--;render()">← 上一頁</button><button class="nav next" '+(page>=total-1?'disabled':'')+' onclick="page++;render()">下一頁 →</button></div><div class="count">第 '+(page+1)+' / '+total+' 頁</div>'}
+function song(){const s=songs[page];main.innerHTML='<button class="back" onclick="goHome()">← 回首頁</button><div class="card lyrics">'+s.l.map(x=>'<div class="line">'+x+'</div>').join('')+'</div>'}
+render();</script></body></html>
