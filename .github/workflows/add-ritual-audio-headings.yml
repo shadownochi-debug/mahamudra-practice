@@ -16,14 +16,21 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re
           p=Path('index.html')
           s=p.read_text(encoding='utf-8')
-          if '.heading{' not in s:
-              s=s.replace('.line{font-size:20px;', '.heading{font-size:15px;font-weight:700;letter-spacing:.12em;color:#4e3c2d;margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid #ddd2c3}.line{font-size:20px;')
+
+          # Keep one audio element outside the page-rendering area so changing
+          # lyric pages does not recreate the player or reset playback.
+          if 'id="ritualPlayer"' not in s:
+              marker='</body>'
+              audio='''<div class="ritual-audio-bar"><div class="ritual-audio-inner"><span>🎵 大手印儀軌｜喜樂之舞</span><audio id="ritualPlayer" controls preload="metadata" src="喜樂之舞_全_剪_GitHub版.mp3"></audio></div></div>'''
+              s=s.replace(marker,audio+marker)
+          if '.ritual-audio-bar{' not in s:
+              s=s.replace('</style>','''.ritual-audio-bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,253,248,.97);border-top:1px solid #ddd2c3;padding:8px 12px calc(8px + env(safe-area-inset-bottom));z-index:100;box-shadow:0 -3px 15px rgba(50,40,30,.08)}.ritual-audio-inner{max-width:680px;margin:auto;display:flex;align-items:center;gap:10px}.ritual-audio-inner span{white-space:nowrap;font-size:13px;font-weight:600;color:#6e5842}.ritual-audio-inner audio{width:100%;height:38px}@media(max-width:420px){.ritual-audio-inner{display:block}.ritual-audio-inner span{display:block;margin-bottom:3px}.ritual-audio-inner audio{height:38px}} </style>''')
+
           start=s.index('function sadhana(){')
           end=s.index('function song(){', start)
-          new_func='''function sadhana(){const start=page*4,p=lyrics.slice(start,start+4);const headings={0:"大手印見修行果",12:"皈依與菩提心",20:"身之寂靜處",24:"大手印禮讚與供養",28:"懺悔、隨喜、祈請與迴向",40:"直指心性之甚深口訣",52:"三門傳遷",56:"破除沙門與梵志之概念",60:"第三灌究竟行持",64:"十六喜與供養",68:"薈供與金剛歌舞",80:"餘供與圓滿",88:"根、道、果吉祥"};const h=headings[start];main.innerHTML='<button class="back" id="back">← 回首頁</button>'+(page===0?'<div class="card audio-card"><div class="audio-label">🎵 大手印儀軌｜喜樂之舞</div><audio controls preload="metadata" src="喜樂之舞_全_剪_GitHub版.mp3"></audio></div>':'')+'<div class="card lyrics">'+(h?'<div class="heading">'+h+'</div>':'')+p.map(x=>'<div class="line">'+x+'</div>').join('')+'</div><div class="navrow"><button class="nav" id="prev">← 上一頁</button><button class="nav next" id="next">下一頁 →</button></div><div class="count">第 '+(page+1)+' / '+total+' 頁</div>';document.getElementById('back').onclick=back;document.getElementById('prev').disabled=page===0;document.getElementById('next').disabled=page>=total-1;document.getElementById('prev').onclick=()=>{if(page>0){page--;render()}};document.getElementById('next').onclick=()=>{if(page<total-1){page++;render()}}}
+          new_func='''function sadhana(){const start=page*4,p=lyrics.slice(start,start+4);const headings={0:"大手印見修行果",12:"皈依與菩提心",20:"身之寂靜處",24:"大手印禮讚與供養",28:"懺悔、隨喜、祈請與迴向",40:"直指心性之甚深口訣",52:"三門傳遷",56:"破除沙門與梵志之概念",60:"第三灌究竟行持",64:"十六喜與供養",68:"薈供與金剛歌舞",80:"餘供與圓滿",88:"根、道、果吉祥"};const h=headings[start];main.innerHTML='<button class="back" id="back">← 回首頁</button>'+'<div class="card lyrics">'+(h?'<div class="heading">'+h+'</div>':'')+p.map(x=>'<div class="line">'+x+'</div>').join('')+'</div><div class="navrow"><button class="nav" id="prev">← 上一頁</button><button class="nav next" id="next">下一頁 →</button></div><div class="count">第 '+(page+1)+' / '+total+' 頁</div>';document.getElementById('back').onclick=back;document.getElementById('prev').disabled=page===0;document.getElementById('next').disabled=page>=total-1;document.getElementById('prev').onclick=()=>{if(page>0){page--;render()}};document.getElementById('next').onclick=()=>{if(page<total-1){page++;render()}}}
 '''
           s=s[:start]+new_func+s[end:]
           p.write_text(s,encoding='utf-8')
@@ -33,5 +40,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
-          git diff --cached --quiet || git commit -m 'Add ritual audio and headings'
+          git diff --cached --quiet || git commit -m 'Keep ritual audio playing across pages'
           git push || true
